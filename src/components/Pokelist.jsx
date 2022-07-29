@@ -5,7 +5,7 @@ import styles from "./Pokelist.module.css";
 
 export function Pokelist() {
   const [list, setList] = useState([]);
-  const [loading, setLoading] = useState(false);
+
   const [currentPageUrl, setCurrentPageUrl] = useState(
     "https://pokeapi.co/api/v2/pokemon/?limit=8"
   );
@@ -13,11 +13,9 @@ export function Pokelist() {
   const [previousPageUrl, setPrevPageUrl] = useState();
 
   useEffect(() => {
-    setLoading(true);
     fetch(currentPageUrl)
       .then((response) => response.json())
       .then((jsonData) => {
-        setLoading(false);
         setNextPageUrl(jsonData.next);
         setPrevPageUrl(jsonData.previous);
         setList(jsonData.results);
@@ -35,18 +33,17 @@ export function Pokelist() {
   };
 
   return (
-    <main className={styles.box}>
-      <div>
-        <Pagination nextPage={nextPage} previousPage={previousPage} />
-        {loading && <div>...</div>}
-      </div>
-      <div className={styles.grid}>
+    <>
+      <main className={styles.box}>
         <ul className={styles.list}>
           {list.map((pokemon) => (
             <Pokemon key={pokemon.name} pokemon={pokemon} />
           ))}
         </ul>
-      </div>
-    </main>
+        <div className={styles.pagination}>
+          <Pagination nextPage={nextPage} previousPage={previousPage} />
+        </div>
+      </main>
+    </>
   );
 }

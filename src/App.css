@@ -4,17 +4,33 @@
 }
 
 .app {
-  background-color: #f8fafc;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #f1f5f9;
 }
 
 .header {
-  height: 5rem;
+  height: 8rem;
+  font-size: 1.5rem;
   background-color: #ff0033;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lexend Deca", sans-serif;
+  color: #f8fafc;
 }
 
 .footer {
+  font-size: 12px;
+  height: 2rem;
+  background-color: #ff0033;
+  color: #f8fafc;
+  display: flex;
+  font-family: "Lexend Deca", sans-serif;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
 }

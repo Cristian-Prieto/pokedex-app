@@ -1,0 +1,20 @@
+.btnCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn {
+  border-style: none;
+  border-radius: 4px;
+  background-color: #ff0033;
+  color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  font-size: 14px;
+  padding: 2px;
+}

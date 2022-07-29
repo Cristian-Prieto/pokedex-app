@@ -1,3 +1,68 @@
-.box {
-  background-color: rgb(255, 98, 0);
+.pokemonBox {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background-color: #f8fafc;
+  width: 9rem;
+  height: 9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  gap: 2px;
+}
+
+.name {
+  text-align: center;
+  padding-right: 4px;
+  display: flex;
+  flex-direction: column;
+}
+.num {
+  font-size: 12px;
+  padding-left: 2px;
+  padding-right: 4px;
+  color: #f8fafc;
+  background-color: #ff0033;
+}
+
+.imgCont {
+  background-color: #ff0033;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sprite {
+  width: 7rem;
+}
+
+.bottom {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.weight {
+  font-size: 10px;
+  padding-right: 4px;
+  color: #ff0033;
+}
+
+.type {
+  font-size: 14px;
+  padding-bottom: 4px;
+  padding-left: 4px;
 }

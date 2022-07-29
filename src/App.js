@@ -8,7 +8,7 @@ function App() {
         <h1>Pokedex</h1>
       </header>
       <Pokelist />
-      <footer className="footer">Cubix 2022</footer>
+      <footer className="footer">Cristian Prieto - Spain - 2022</footer>
     </div>
   );
 }
