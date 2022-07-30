@@ -1,13 +1,23 @@
 .pokemonBox {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  background-color: #f8fafc;
   width: 9rem;
   height: 9rem;
+  display: flex;
+}
+
+.insideBox {
+  width: 100%;
+  aspect-ratio: 1;
+  border-style: none;
+  border-radius: 4px;
+  background-color: #f8fafc;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+  font-family: "Varela", sans-serif;
 }
 
 .title {
