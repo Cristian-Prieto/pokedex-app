@@ -20,57 +20,136 @@ export function Modal({ close, info }) {
               className={styles.sprite}
             />
           </div>
-          <span>{info.types[0].type.name}</span>
+          <span
+            style={{
+              fontFamily: "Verdana",
+              fontSize: "28px",
+              color: "#ff0033",
+            }}
+          >
+            {info.types[0].type.name}
+          </span>
           <div className={styles.moves}>
             <ul className={styles.movesLeft}>
-              <li>{info.moves[0].move.name}</li>
-              <li>{info.moves[1].move.name}</li>
+              <li className={styles.moveItem}>{info.moves[0].move.name}</li>
+              <li className={styles.moveItem}>{info.moves[1].move.name}</li>
             </ul>
             <ul className={styles.movesRight}>
-              <li>{info.moves[2].move.name}</li>
-              <li>{info.moves[3].move.name}</li>
+              <li className={styles.moveItem}>{info.moves[2].move.name}</li>
+              <li className={styles.moveItem}>{info.moves[3].move.name}</li>
             </ul>
           </div>
+          {/* Stats */}
           <div className={styles.stats}>
             <div className={styles.statBlock}>
-              <div className={styles.statName}>{info.stats[0].stat.name}:</div>
-
+              <div className={styles.statName}>{info.stats[1].stat.name}</div>
               <div
                 style={{
-                  backgroundColor: "white",
-                  height: "12px",
-                  width: "25%",
+                  display: "flex",
+                  justifyContent: "right",
+                  width: "15rem",
+                  backgroundColor: "#cbd5e1",
+                  borderRadius: "6px",
                 }}
               >
-                hola
+                <div
+                  style={{
+                    backgroundColor: " #ff0033",
+                    height: "10px",
+                    borderRadius: "6px",
+                    width: `${info.stats[0].base_stat}%`,
+                  }}
+                ></div>
               </div>
-              <div>{info.stats[0].base_stat}</div>
-            </div>
-
-            <div className={styles.statBlock}>
-              <div className={styles.statName}>{info.stats[1].stat.name}:</div>
-              <div className={styles.bar}>barritas</div>
-              <div>{info.stats[1].base_stat}</div>
+              <div className={styles.statNum}>{info.stats[1].base_stat}</div>
             </div>
             <div className={styles.statBlock}>
-              <div className={styles.statName}>{info.stats[2].stat.name}:</div>
-              <div className={styles.bar}>barritas</div>
-              <div>{info.stats[2].base_stat}</div>
+              <div className={styles.statName}>{info.stats[2].stat.name}</div>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "right",
+                  width: "15rem",
+                  backgroundColor: "#cbd5e1",
+                  borderRadius: "6px",
+                }}
+              >
+                <div
+                  style={{
+                    backgroundColor: " #ff0033",
+                    height: "10px",
+                    borderRadius: "6px",
+                    width: `${info.stats[0].base_stat}%`,
+                  }}
+                ></div>
+              </div>
+              <div className={styles.statNum}>{info.stats[2].base_stat}</div>
             </div>
             <div className={styles.statBlock}>
-              <div className={styles.statName}>{info.stats[3].stat.name}:</div>
-              <div className={styles.bar}>barritas</div>
-              <div>{info.stats[3].base_stat}</div>
+              <div className={styles.statName}>{info.stats[3].stat.name}</div>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "right",
+                  width: "15rem",
+                  backgroundColor: "#cbd5e1",
+                  borderRadius: "6px",
+                }}
+              >
+                <div
+                  style={{
+                    backgroundColor: " #ff0033",
+                    height: "10px",
+                    borderRadius: "6px",
+                    width: `${info.stats[0].base_stat}%`,
+                  }}
+                ></div>
+              </div>
+              <div className={styles.statNum}>{info.stats[3].base_stat}</div>
             </div>
             <div className={styles.statBlock}>
-              <div className={styles.statName}>{info.stats[4].stat.name}:</div>
-              <div className={styles.bar}>barritas</div>
-              <div>{info.stats[4].base_stat}</div>
+              <div className={styles.statName}>{info.stats[4].stat.name}</div>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "right",
+                  width: "15rem",
+                  backgroundColor: "#cbd5e1",
+                  borderRadius: "6px",
+                }}
+              >
+                <div
+                  style={{
+                    backgroundColor: " #ff0033",
+                    height: "10px",
+                    borderRadius: "6px",
+                    width: `${info.stats[0].base_stat}%`,
+                  }}
+                ></div>
+              </div>
+              <div className={styles.statNum}>{info.stats[4].base_stat}</div>
             </div>
             <div className={styles.statBlock}>
-              <div className={styles.statName}>{info.stats[5].stat.name}:</div>
-              <div className={styles.bar}>barritas</div>
-              <div>{info.stats[5].base_stat}</div>
+              <div className={styles.statName}>{info.stats[5].stat.name}</div>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "right",
+                  width: "15rem",
+                  backgroundColor: "#cbd5e1",
+                  borderRadius: "6px",
+                }}
+              >
+                <div
+                  style={{
+                    backgroundColor: " #ff0033",
+                    height: "10px",
+                    borderRadius: "6px",
+                    width: `${info.stats[0].base_stat}%`,
+                  }}
+                ></div>
+              </div>
+              <div className={styles.statNum}>{info.stats[5].base_stat}</div>
             </div>
           </div>
         </div>
