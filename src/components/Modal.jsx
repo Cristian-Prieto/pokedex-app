@@ -1,6 +1,20 @@
 import styles from "./Modal.module.css";
 
 export function Modal({ close, info }) {
+  //   const statBar = () => {
+  //     if (info.stats.base_stat >= 90) {
+  //       return 100;
+  //     } else if (info.stats.base_stat >= 75) {
+  //       return 75;
+  //     } else if (info.stats.base_stat >= 50) {
+  //       return 50;
+  //     } else if (info.stats.base_stat >= 25) {
+  //       return 25;
+  //     } else if (info.stats.base_stat < 10) {
+  //       return 10;
+  //     }
+  //   };
+
   return (
     <button className={styles.overlay} onClick={close}>
       <div className={styles.container}>
@@ -40,116 +54,157 @@ export function Modal({ close, info }) {
             </ul>
           </div>
           {/* Stats */}
-          <div className={styles.stats}>
-            <div className={styles.statBlock}>
-              <div className={styles.statName}>{info.stats[1].stat.name}</div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "right",
-                  width: "15rem",
-                  backgroundColor: "#cbd5e1",
-                  borderRadius: "6px",
-                }}
-              >
-                <div
-                  style={{
-                    backgroundColor: " #ff0033",
-                    height: "10px",
-                    borderRadius: "6px",
-                    width: `${info.stats[0].base_stat}%`,
-                  }}
-                ></div>
-              </div>
-              <div className={styles.statNum}>{info.stats[1].base_stat}</div>
+          <div className={styles.statCont}>
+            <div className={styles.leftBlock}>
+              <div> {info.stats[0].stat.name}</div>
+              <div> {info.stats[1].stat.name}</div>
+              <div> {info.stats[2].stat.name}</div>
+              <div> {info.stats[3].stat.name}</div>
+              <div> {info.stats[4].stat.name}</div>
+              <div> {info.stats[5].stat.name}</div>
             </div>
-            <div className={styles.statBlock}>
-              <div className={styles.statName}>{info.stats[2].stat.name}</div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "4px",
+                width: "25rem",
+                height: "100%",
+                alignItems: "center",
+                justifyContent: "space-between",
+                backgroundColor: "#94a3b8",
+                padding: "4px 6px",
+                borderRadius: "9px",
+              }}
+            >
               <div
                 style={{
+                  height: "10px",
+                  padding: "2px",
+                  width: "100%",
                   display: "flex",
-                  justifyContent: "right",
-                  width: "15rem",
-                  backgroundColor: "#cbd5e1",
+                  alignItems: "center",
+                  backgroundColor: " #f8fafc",
                   borderRadius: "6px",
                 }}
               >
                 <div
                   style={{
-                    backgroundColor: " #ff0033",
-                    height: "10px",
-                    borderRadius: "6px",
+                    height: "8px",
                     width: `${info.stats[0].base_stat}%`,
+                    backgroundColor: "red",
+                    borderRadius: "6px",
                   }}
                 ></div>
               </div>
-              <div className={styles.statNum}>{info.stats[2].base_stat}</div>
+              <div
+                style={{
+                  height: "10px",
+                  padding: "2px",
+                  width: "100%",
+                  display: "flex",
+                  alignItems: "center",
+                  backgroundColor: " #f8fafc",
+                  borderRadius: "6px",
+                }}
+              >
+                <div
+                  style={{
+                    height: "8px",
+                    width: `${info.stats[1].base_stat}%`,
+                    backgroundColor: "red",
+                    borderRadius: "6px",
+                  }}
+                ></div>
+              </div>
+              <div
+                style={{
+                  height: "10px",
+                  padding: "2px",
+                  width: "100%",
+                  display: "flex",
+                  alignItems: "center",
+                  backgroundColor: "#f8fafc",
+                  borderRadius: "6px",
+                }}
+              >
+                <div
+                  style={{
+                    height: "8px",
+                    width: `${info.stats[3].base_stat}%`,
+                    backgroundColor: "red",
+                    borderRadius: "6px",
+                  }}
+                ></div>
+              </div>
+              <div
+                style={{
+                  height: "10px",
+                  padding: "2px",
+                  width: "100%",
+                  display: "flex",
+                  alignItems: "center",
+                  backgroundColor: " #f8fafc",
+                  borderRadius: "6px",
+                }}
+              >
+                <div
+                  style={{
+                    height: "8px",
+                    width: `${info.stats[3].base_stat}%`,
+                    backgroundColor: "red",
+                    borderRadius: "6px",
+                  }}
+                ></div>
+              </div>
+              <div
+                style={{
+                  height: "10px",
+                  padding: "2px",
+                  width: "100%",
+                  display: "flex",
+                  alignItems: "center",
+                  backgroundColor: " #f8fafc",
+                  borderRadius: "6px",
+                }}
+              >
+                <div
+                  style={{
+                    height: "8px",
+                    width: `${info.stats[4].base_stat}%`,
+                    backgroundColor: "red",
+                    borderRadius: "6px",
+                  }}
+                ></div>
+              </div>
+              <div
+                style={{
+                  height: "10px",
+                  padding: "2px",
+                  width: "100%",
+                  display: "flex",
+                  alignItems: "center",
+                  backgroundColor: " #f8fafc",
+                  borderRadius: "6px",
+                }}
+              >
+                <div
+                  style={{
+                    height: "8px",
+                    width: `${info.stats[5].base_stat}%`,
+                    backgroundColor: "red",
+                    borderRadius: "6px",
+                  }}
+                ></div>
+              </div>
             </div>
-            <div className={styles.statBlock}>
-              <div className={styles.statName}>{info.stats[3].stat.name}</div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "right",
-                  width: "15rem",
-                  backgroundColor: "#cbd5e1",
-                  borderRadius: "6px",
-                }}
-              >
-                <div
-                  style={{
-                    backgroundColor: " #ff0033",
-                    height: "10px",
-                    borderRadius: "6px",
-                    width: `${info.stats[0].base_stat}%`,
-                  }}
-                ></div>
-              </div>
-              <div className={styles.statNum}>{info.stats[3].base_stat}</div>
-            </div>
-            <div className={styles.statBlock}>
-              <div className={styles.statName}>{info.stats[4].stat.name}</div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "right",
-                  width: "15rem",
-                  backgroundColor: "#cbd5e1",
-                  borderRadius: "6px",
-                }}
-              >
-                <div
-                  style={{
-                    backgroundColor: " #ff0033",
-                    height: "10px",
-                    borderRadius: "6px",
-                    width: `${info.stats[0].base_stat}%`,
-                  }}
-                ></div>
-              </div>
-              <div className={styles.statNum}>{info.stats[4].base_stat}</div>
-            </div>
-            <div className={styles.statBlock}>
-              <div className={styles.statName}>{info.stats[5].stat.name}</div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "right",
-                  width: "15rem",
-                  backgroundColor: "#cbd5e1",
-                  borderRadius: "6px",
-                }}
-              >
-                <div
-                  style={{
-                    backgroundColor: " #ff0033",
-                    height: "10px",
-                    borderRadius: "6px",
-                    width: `${info.stats[0].base_stat}%`,
-                  }}
-                ></div>
-              </div>
-              <div className={styles.statNum}>{info.stats[5].base_stat}</div>
+            <div className={styles.rightBlock}>
+              <div> {info.stats[0].base_stat}</div>
+              <div> {info.stats[1].base_stat}</div>
+              <div> {info.stats[2].base_stat}</div>
+              <div> {info.stats[3].base_stat}</div>
+              <div> {info.stats[4].base_stat}</div>
+              <div> {info.stats[5].base_stat}</div>
             </div>
           </div>
         </div>
