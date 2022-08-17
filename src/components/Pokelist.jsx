@@ -9,8 +9,8 @@ export function Pokelist() {
   const [currentPageUrl, setCurrentPageUrl] = useState(
     "https://pokeapi.co/api/v2/pokemon/?limit=8"
   );
-  const [nextPageUrl, setNextPageUrl] = useState();
-  const [previousPageUrl, setPrevPageUrl] = useState();
+  const [nextPageUrl, setNextPageUrl] = useState(null);
+  const [previousPageUrl, setPrevPageUrl] = useState(null);
 
   useEffect(() => {
     fetch(currentPageUrl)
@@ -19,7 +19,6 @@ export function Pokelist() {
         setNextPageUrl(jsonData.next);
         setPrevPageUrl(jsonData.previous);
         setList(jsonData.results);
-        console.log(jsonData.results);
       })
       .catch((err) => console.log(err));
   }, [currentPageUrl]);

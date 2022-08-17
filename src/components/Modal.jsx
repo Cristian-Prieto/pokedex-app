@@ -1,20 +1,6 @@
 import styles from "./Modal.module.css";
 
 export function Modal({ close, info }) {
-  //   const statBar = () => {
-  //     if (info.stats.base_stat >= 90) {
-  //       return 100;
-  //     } else if (info.stats.base_stat >= 75) {
-  //       return 75;
-  //     } else if (info.stats.base_stat >= 50) {
-  //       return 50;
-  //     } else if (info.stats.base_stat >= 25) {
-  //       return 25;
-  //     } else if (info.stats.base_stat < 10) {
-  //       return 10;
-  //     }
-  //   };
-
   return (
     <button className={styles.overlay} onClick={close}>
       <div className={styles.container}>
@@ -53,7 +39,6 @@ export function Modal({ close, info }) {
               <li className={styles.moveItem}>{info.moves[3].move.name}</li>
             </ul>
           </div>
-          {/* Stats */}
           <div className={styles.statCont}>
             <div className={styles.leftBlock}>
               <div> {info.stats[0].stat.name}</div>
@@ -131,7 +116,7 @@ export function Modal({ close, info }) {
                 <div
                   style={{
                     height: "8px",
-                    width: `${info.stats[3].base_stat}%`,
+                    width: `${info.stats[2].base_stat}%`,
                     backgroundColor: "red",
                     borderRadius: "6px",
                   }}

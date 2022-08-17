@@ -129,25 +129,24 @@
 
 .statCont {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 7rem;
-  gap: 4px;
-  font-size: 14px;
+  gap: 6px;
 }
 
 .leftBlock {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #f8fafc;
-  background-color: #ff0033;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  text-align: right;
+  font-weight: bolder;
+  color: #ff0033;
+  border-radius: 8px;
   height: 100%;
-  width: 100%;
-  padding: 4px;
+  width: 60%;
+  padding: 4px 6px;
+  gap: 2px;
 }
 
 .rightBlock {
@@ -155,9 +154,10 @@
   flex-direction: column;
   justify-content: center;
   text-align: left;
-  height: 100%;
-  width: 3rem;
-  gap: 2px;
-  padding: 4px;
+  font-weight: bolder;
   color: #ff0033;
+  border-radius: 8px;
+  height: 100%;
+  padding: 4px 6px;
+  gap: 2px;
 }
