@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/badge/REACT--DOM-18.2.0-blue)
 
-# Shopbix
+# POKUBIX
 
 ![](https://img.shields.io/netlify/d49cf315-5964-4a38-a1e5-696699cc297c)
 
