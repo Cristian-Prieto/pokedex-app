@@ -7,7 +7,6 @@ export function Modal({ close, info }) {
         <div className={styles.Inside}>
           <div className={styles.title}>
             <span className={styles.num}>
-              {" "}
               #{info.id.toString().padStart(3, 0)}
             </span>
             <h2 className={styles.name}> {info.name}</h2>
